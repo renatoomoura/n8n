@@ -48,6 +48,15 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 </p>
 sudo apt install ./google-chrome-stable_current_amd64.deb
 </p>
+
+----------------------------------------------------------------------------
+
+**Configure o Nginx**
+
+sudo apt-get install nginx
+</p>
+cd /etc/nginx/sites-enabled
+</p>
 sudo nano /etc/nginx/sites-available/n8n
 </p>
 server {
@@ -119,6 +128,57 @@ docker run -it --rm \
 	</p>
 	n8n start --tunnel
 	</p>
+	
+----------------------------------------------------------------------------
+
+**Configure o Nginx**
+
+sudo apt-get install nginx
+</p>
+cd /etc/nginx/sites-enabled
+</p>
+sudo nano /etc/nginx/sites-available/n8n
+</p>
+server {
+</p>
+  server_name n8n.dominio.com.br;
+</p>
+  location / {
+</p>
+    proxy_pass http://127.0.0.1:5678;
+</p>
+    proxy_http_version 1.1;
+</p>
+    proxy_set_header Upgrade $http_upgrade;
+</p>
+    proxy_set_header Connection 'upgrade';
+</p>
+    proxy_set_header Host $host;
+</p>
+    proxy_set_header X-Real-IP $remote_addr;
+</p>
+    proxy_set_header X-Forwarded-Proto $scheme;
+</p>
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+</p>
+    proxy_cache_bypass $http_upgrade;
+</p>
+    proxy_buffering off;
+</p>
+    proxy_cache off;
+</p>
+  }
+</p>
+  }
+</p>
+sudo ln -s /etc/nginx/sites-available/n8n /etc/nginx/sites-enabled
+</p>
+sudo certbot --nginx
+</p>
+sudo service nginx restart
+</p>
+
+----------------------------------------------------------------------------
 
 **Agora vamos deixar em modo produção **
 
