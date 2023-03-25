@@ -1,6 +1,6 @@
 <p align="center">
 	<img src="https://d33wubrfki0l68.cloudfront.net/b8db213a4d85ebec7b82272cacb727a05a9a1475/96e9f/_images/n8n-docs-icon.svg" alt="Quepasa-logo" width="100" />	
-	<p align="center">Quepasa é um software de código aberto, totalmente gratuito, para troca de mensagens com a plataforma Whatsapp</p>
+	<p align="center">Crie automações complexas 10 vezes mais rápido, sem brigar com APIs</p>
 </p>
 <hr />
 <p align="left">
