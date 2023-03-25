@@ -91,11 +91,43 @@ sudo service nginx restart
 pm2 start n8n --cron-restart="0 0 * * *" -- start
 </p>
 
+
+Acesse: seusite.com.br
+Faça o cadastro e use a voltade
+
 ----------------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------------
 
+**Versão Docker**
+
+**Manual de Instalação N8N via Docker**
+
+</p>
+Vamos instalar seu N8N
+</p>
+docker run -it --rm \
+</p>
+	--name n8n \
+	</p>
+	-p 5678:5678 \
+	</p>
+	-v ~/.n8n:/home/node/.n8n \
+	</p>
+	n8nio/n8n \
+	</p>
+	n8n start --tunnel
+	</p>
+
+**Agora vamos deixar em modo produção **
+
+</p>
+
+</p>
+</p>
+Acesse: seusite.com.br
+Faça o cadastro e use a voltade
 </p>
 
 **Gostou do Tutorial? Faça sua Contribuição**
