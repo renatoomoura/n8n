@@ -1,6 +1,6 @@
 <p align="center">
 	<img src="https://github.com/EngajamentoFlow/n8n/blob/main/n8n.png" alt="N8N-logo" width="100" />	
-	<p align="center">Quepasa é um software de código aberto, totalmente gratuito, para troca de mensagens com a plataforma Whatsapp</p>
+	<p align="center">Crie automações complexas 10 vezes mais rápido, sem brigar com APIs</p>
 </p>
 <hr />
 <p align="left">
@@ -30,28 +30,52 @@
 45959142000119	
 ```
 
-**Manual de Instalação API Quepasa**
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
-git clone https://github.com/sufficit/sufficit-quepasa /opt/quepasa-source
-</p>
-bash /opt/quepasa-source/helpers/install.sh
-</p>
-sudo apt-get install nginx
-</p>
-cd /etc/nginx/sites-enabled
-</p>
-sudo nano /etc/nginx/sites-available/quepasa
 
+----------------------------------------------------------------------------
+
+**Pronto tudo Funcionando**
+
+----------------------------------------------------------------------------
+
+**Comando atualizar API Quepasa**
+
+su - quepasa
 </p>
+----------------------------------------------------------------------------
+
+**Manual de Instalação N8N**
+
+sudo apt update && apt upgrade -y
+</p>
+sudo apt-get install -y libgbm-dev wget unzip fontconfig locales gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils
+</p>
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+</p>
+sudo apt-get install -y nodejs
+</p>
+sudo npm install n8n -g
+</p>
+npm update -g n8n
+</p>
+npm install pm2 -g
+</p>
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+</p>
+sudo apt install ./google-chrome-stable_current_amd64.deb
+</p>
+sudo nano /etc/nginx/sites-available/n8n
 
 ```
 server {
 
-  server_name quepasa.dominio.com.br;
+  server_name n8n.dominio.com.br;
 
   location / {
 
-    proxy_pass http://127.0.0.1:31000;
+    proxy_pass http://127.0.0.1:5678;
 
     proxy_http_version 1.1;
 
@@ -66,141 +90,28 @@ server {
     proxy_set_header X-Forwarded-Proto $scheme;
 
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    
+
     proxy_cache_bypass $http_upgrade;
 
+    proxy_buffering off;
+
+    proxy_cache off;
+
   }
 
   }
-```
+  ```
 
-sudo ln -s /etc/nginx/sites-available/quepasa /etc/nginx/sites-enabled
 </p>
-</p>
-sudo apt-get install snapd
-</p>
-sudo snap install --classic certbot
-</p>
-sudo certbot --nginx
-</p>
-Coloque Email:
-</p>
-Y
-</p>
-Y
+sudo ln -s /etc/nginx/sites-available/n8n /etc/nginx/sites-enabled
 </p>
 sudo certbot --nginx
 </p>
 sudo service nginx restart
 </p>
-
-----------------------------------------------------------------------------
-
-**Ativando SSL da API Quepasa**
-
-nano /opt/quepasa-source/src/.env
-</p>
-Alterar linha 1
-</p>
-WEBSOCKETSSL=false
-</p>
-para
-</p>
-WEBSOCKETSSL=true
-</p>
-systemctl restart quepasa
-</p>
-
-----------------------------------------------------------------------------
-
-**Instalação Finalizadas**
-
-</p>
-quepa.dominio.com.br/setup
-</p>
-Faça os cadastros em todos eles
+pm2 start n8n --cron-restart="0 0 * * *" -- start
 </p>
 ----------------------------------------------------------------------------
-</p>
-----------------------------------------------------------------------------
-
-**Instalar NO no N8N**
-
-n8n-nodes-chatwoot
-</p>
-n8n-nodes-quepasa
-</p>
-Baixar Workflow
-</p>
-Disponiveis nesse Github
-</p>
-----------------------------------------------------------------------------
-</p>
-
-**Configue os Worflows no N8N**
-
-**Worflow QuepasaQrcode**
-
-</p>
-Acesse seuchatwoot/super_admin e crie um token na opção Platform Apps
-</p>
-Segundo NO “COLOCANDO DADOS" URL N8N, URL DO QUEPASA, URL CHATWOOT, TOKEN TOKEN PLATFORM APPS
-</p>
-Coloque suas credenciais NOS PostgreSQL, elas estarão em seu .env na pasta /home/chatwoot/chatwoot
-</p>
-Ligue seu Workflow e divirta-se 
-
-</p>
-----------------------------------------------------------------------------
-</p>
-
-**Worflows ChatwootToQuepasa QuepasaToChatwoot**
-
-</p>
-Adicione numeros NOS Trigger com numeros correspondente a Workflow
-</p>
-----------------------------------------------------------------------------
-
-**Criando Seu Bot Agente**
-
-Acesse: chatwoot.dominio.com.br/superadmin
-</p>
-Crie seu Token Platform Apps
-</p>
-----------------------------------------------------------------------------
-
-**Crie uma Automação conforme a imagem abaixo**
-
-<img src="https://github.com/EngajamentoFlow/quepasa/blob/main/Automa%C3%A7%C3%A3o.png" alt="Automação" width="1000" />
-</p>
-----------------------------------------------------------------------------
-
-**Criando sua Caixa de Entrada**
-
-Criar um contato no Chatwoot
-</p>
-Quepasa Control
-</p>
-control@quepasa.io
-</p>
-Envia uma mensagem para Contato Criado
-</p>
-Quepasa Control
-</p>
-/qrcode
-</p>
-Leia QRCODE
-</p>
-----------------------------------------------------------------------------
-
-**Pronto tudo Funcionando**
-
-----------------------------------------------------------------------------
-
-**Comando atualizar API Quepasa**
-
-su - quepasa
-</p>
 git pull
 </p>
 exit
