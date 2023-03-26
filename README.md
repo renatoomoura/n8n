@@ -112,10 +112,17 @@ Faça o cadastro e use a voltade
 **Manual de Instalação N8N via Docker**
 
 mkdir n8n
+</p>
 cd n8n
+</p>
 git clone https://github.com/n8n-io/n8n
+</p>
 cd n8n/docker/compose/withPostgres
+</p>
 nano .env
+</p>
+
+</p>
 POSTGRES_USER=Coloque um User
 POSTGRES_PASSWORD=Coloque uma Senha
 POSTGRES_DB=Coloque DB
@@ -125,7 +132,7 @@ POSTGRES_NON_ROOT_PASSWORD=changePassword
 
 N8N_BASIC_AUTH_USER=Coloque um Email
 N8N_BASIC_AUTH_PASSWORD=Coloque uma Senha
-
+</p>
 
 
 
