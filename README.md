@@ -6,7 +6,7 @@
 <p align="left">
 	<img src="https://telegram.org/favicon.ico" alt="Telegram-logo" width="32" />
 	<span>Grupo e Canal Telegram: </span>
-	<a href="https://t.me/quepasa_api" target="_blank">Grupo</a>
+	<a href="https://t.me/n8nbr" target="_blank">Grupo</a>
 	<span> || </span>
 	<a href="https://t.me/quepasa_channel" target="_blank">Canal</a>
 </p>
@@ -14,7 +14,7 @@
 <p align="left">
 	<img src="https://whatsapp.com/favicon.ico" alt="WhatsAPP-logo" width="32" />
 	<span>Grupo WhatsaAPP: </span>
-	<a href="https://chat.whatsapp.com/Cv5WfmujRzE09yQ6hagYim" target="_blank">Grupo</a>
+	<a href="https://telinkei.com/gp-n8n-zap" target="_blank">Grupo</a>
 </p>
 ----------------------------------------------------------------------------
 </p>
@@ -23,6 +23,15 @@
 
 <img src="https://d33wubrfki0l68.cloudfront.net/b8db213a4d85ebec7b82272cacb727a05a9a1475/96e9f/_images/n8n-docs-icon.svg" alt="Quepasa-logo" width="200" />
 </p>
+
+
+**PIX CNPJ**
+
+```
+45959142000119	
+```
+
+----------------------------------------------------------------------------
 
 **Manual de Instalação Chatwoot+N8N+Quepasa**
 
@@ -59,37 +68,26 @@ cd /etc/nginx/sites-enabled
 </p>
 sudo nano /etc/nginx/sites-available/n8n
 </p>
+
+```
 server {
-</p>
   server_name n8n.dominio.com.br;
-</p>
   location / {
-</p>
     proxy_pass http://127.0.0.1:5678;
-</p>
     proxy_http_version 1.1;
-</p>
     proxy_set_header Upgrade $http_upgrade;
-</p>
     proxy_set_header Connection 'upgrade';
-</p>
     proxy_set_header Host $host;
-</p>
     proxy_set_header X-Real-IP $remote_addr;
-</p>
     proxy_set_header X-Forwarded-Proto $scheme;
-</p>
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-</p>
     proxy_cache_bypass $http_upgrade;
-</p>
     proxy_buffering off;
-</p>
     proxy_cache off;
-</p>
   }
-</p>
   }
+```
+
 </p>
 sudo ln -s /etc/nginx/sites-available/n8n /etc/nginx/sites-enabled
 </p>
@@ -139,37 +137,26 @@ cd /etc/nginx/sites-enabled
 </p>
 sudo nano /etc/nginx/sites-available/n8n
 </p>
+
+```
 server {
-</p>
   server_name n8n.dominio.com.br;
-</p>
   location / {
-</p>
     proxy_pass http://127.0.0.1:5678;
-</p>
     proxy_http_version 1.1;
-</p>
     proxy_set_header Upgrade $http_upgrade;
-</p>
     proxy_set_header Connection 'upgrade';
-</p>
     proxy_set_header Host $host;
-</p>
     proxy_set_header X-Real-IP $remote_addr;
-</p>
     proxy_set_header X-Forwarded-Proto $scheme;
-</p>
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-</p>
     proxy_cache_bypass $http_upgrade;
-</p>
     proxy_buffering off;
-</p>
     proxy_cache off;
-</p>
   }
-</p>
   }
+```
+  
 </p>
 sudo ln -s /etc/nginx/sites-available/n8n /etc/nginx/sites-enabled
 </p>
@@ -194,4 +181,11 @@ Faça o cadastro e use a voltade
 
 <img src="https://github.com/EngajamentoFlow/quepasa/blob/main/Contribui%C3%A7%C3%A3o.png" alt="Quepasa-logo" width="200" />
 </p>
+
+**PIX CNPJ**
+
+```
+45959142000119	
+```
+
 ----------------------------------------------------------------------------
