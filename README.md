@@ -54,6 +54,8 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 </p>
 sudo nano /etc/nginx/sites-available/n8n
+</p>
+</p>
 
 ```
 server {
@@ -120,6 +122,9 @@ docker compose up -d
 
 </p>
 sudo nano /etc/nginx/sites-available/n8n
+
+</p>
+</p>
 
 ```
 server {
