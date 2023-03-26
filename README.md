@@ -100,22 +100,6 @@ pm2 start n8n --cron-restart="0 0 * * *" -- start
 </p>
 ----------------------------------------------------------------------------
 
-</p>
-git pull
-</p>
-exit
-</p>
-systemctl daemon-reload
-</p>
-Acesse site e faça o cadastro
-</p>
-
-</p>
-Acesse site e faça o cadastro
-</p>
-
----------------------------------------------------------------------------
-
 **Pronto tudo Funcionando**
 
 ----------------------------------------------------------------------------
