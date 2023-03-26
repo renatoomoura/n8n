@@ -137,10 +137,6 @@ N8N_BASIC_AUTH_USER=Coloque um Email
 </p>
 N8N_BASIC_AUTH_PASSWORD=Coloque uma Senha
 </p>
-
-
-
-
 	
 ----------------------------------------------------------------------------
 
@@ -179,6 +175,12 @@ sudo certbot --nginx
 </p>
 sudo service nginx restart
 </p>
+
+----------------------------------------------------------------------------
+
+**Instalando seu N8N**
+
+docker compose up -d
 
 ----------------------------------------------------------------------------
 
