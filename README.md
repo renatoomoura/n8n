@@ -124,13 +124,17 @@ nano .env
 
 </p>
 POSTGRES_USER=Coloque um User
+</p>
 POSTGRES_PASSWORD=Coloque uma Senha
+</p>
 POSTGRES_DB=Coloque DB
-
+</p>
 POSTGRES_NON_ROOT_USER=changeUser
+</p>
 POSTGRES_NON_ROOT_PASSWORD=changePassword
-
+</p>
 N8N_BASIC_AUTH_USER=Coloque um Email
+</p>
 N8N_BASIC_AUTH_PASSWORD=Coloque uma Senha
 </p>
 
