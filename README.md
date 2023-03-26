@@ -99,6 +99,8 @@ sudo service nginx restart
 pm2 start n8n --cron-restart="0 0 * * *" -- start
 </p>
 ----------------------------------------------------------------------------
+
+</p>
 git pull
 </p>
 exit
