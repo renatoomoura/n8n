@@ -167,15 +167,13 @@ sudo service nginx restart
 
 ----------------------------------------------------------------------------
 
-**Agora vamos deixar em modo produção **
-
-</p>
-
-</p>
 </p>
 Acesse: seusite.com.br
 Faça o cadastro e use a voltade
 </p>
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 **Gostou do Tutorial? Faça sua Contribuição**
 
