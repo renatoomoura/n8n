@@ -51,6 +51,8 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 </p>
 sudo apt install ./google-chrome-stable_current_amd64.deb
 </p>
+sudo apt install nginx
+</p>
 sudo nano /etc/nginx/sites-available/n8n
 </p>
 </p>
@@ -92,6 +94,12 @@ server {
 </p>
 sudo ln -s /etc/nginx/sites-available/n8n /etc/nginx/sites-enabled
 </p>
+sudo apt-get install snapd
+</p>
+sudo snap install notes
+</p>
+sudo snap install --classic certbot
+</p><
 sudo certbot --nginx
 </p>
 sudo service nginx restart
@@ -101,74 +109,6 @@ pm2 start n8n --cron-restart="0 0 * * *" -- start
 ----------------------------------------------------------------------------
 
 **Pronto tudo Funcionando**
-
-----------------------------------------------------------------------------
-
-**Versão Docker**
-
-**Manual de Instalação ChatWoot via Docker**
-
-----------------------------------------------------------------------------
-
-git clone https://github.com/EngajamentoFlow/n8n
-</p>
-cd n8n
-</p>
-docker compose up -d
-</p>
-
-
-</p>
-sudo nano /etc/nginx/sites-available/n8n
-
-</p>
-</p>
-
-```
-server {
-
-  server_name n8n.dominio.com.br;
-
-  location / {
-
-    proxy_pass http://127.0.0.1:5678;
-
-    proxy_http_version 1.1;
-
-    proxy_set_header Upgrade $http_upgrade;
-
-    proxy_set_header Connection 'upgrade';
-
-    proxy_set_header Host $host;
-
-    proxy_set_header X-Real-IP $remote_addr;
-
-    proxy_set_header X-Forwarded-Proto $scheme;
-
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-
-    proxy_cache_bypass $http_upgrade;
-
-    proxy_buffering off;
-
-    proxy_cache off;
-
-  }
-
-  }
-  ```
-
-</p>
-sudo ln -s /etc/nginx/sites-available/n8n /etc/nginx/sites-enabled
-</p>
-sudo certbot --nginx
-</p>
-sudo service nginx restart
-</p>
-
-</p>
-Acesse site e faça o cadastro
-</p>
 
 ----------------------------------------------------------------------------
 
