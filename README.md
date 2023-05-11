@@ -106,7 +106,7 @@ sudo apt-get install snapd
 sudo snap install notes
 </p>
 sudo snap install --classic certbot
-</p><
+</p>
 sudo certbot --nginx
 </p>
 sudo service nginx restart
