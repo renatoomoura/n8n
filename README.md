@@ -60,6 +60,7 @@ sudo apt install nginx
 sudo nano /etc/nginx/sites-available/n8n
 </p>
 </p>
+</p>
 
 ```
 server {
@@ -95,6 +96,8 @@ server {
   }
   ```
 
+</p>
+</p>
 </p>
 sudo ln -s /etc/nginx/sites-available/n8n /etc/nginx/sites-enabled
 </p>
