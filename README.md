@@ -107,6 +107,8 @@ sudo snap install notes
 </p>
 sudo snap install --classic certbot
 </p>
+systemctl stop apache2.service
+</p>
 sudo certbot --nginx
 </p>
 sudo service nginx restart
