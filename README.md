@@ -117,6 +117,25 @@ pm2 start n8n --cron-restart="0 0 * * *" -- start
 </p>
 pm2 startup ubuntu -u root & pm2 startup ubuntu -u root --hp /root & pm2 save
 </p>
+cd 
+</p>
+export N8N_EDITOR_BASE_URL=https://seudominio.com.br
+</p>
+export WEBHOOK_URL=https://seudominio.com.br
+</p>
+pm2 restart all --update-env
+</p>
+
+
+
+</p>
+export N8N_EDITOR_BASE_URL=https://n8n.socialatendimento.com.br
+
+export WEBHOOK_URL=https://n8n.socialatendimento.com.br
+
+pm2 restart all --update-env
+
+
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
