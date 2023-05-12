@@ -133,9 +133,9 @@ pm2 restart all --update-env
 export N8N_EDITOR_BASE_URL=https://n8n.socialatendimento.com.br
 </p>
 export WEBHOOK_URL=https://n8n.socialatendimento.com.br
-
+</p>
 pm2 restart all --update-env
-
+</p>
 
 
 ----------------------------------------------------------------------------
